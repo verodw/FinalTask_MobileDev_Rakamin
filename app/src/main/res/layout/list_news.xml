@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp">
+
+        <!-- ImageView untuk menampilkan gambar dari API -->
+        <ImageView
+            android:id="@+id/newsListImage"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/rounded_corners" />
+
+        <!-- TextView untuk menampilkan judul berita -->
+        <TextView
+            android:id="@+id/titleList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/newsListImage"
+            android:paddingStart="8dp"
+            android:text="Judul List Berita"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            />
+
+        <!-- TextView untuk menampilkan author dan tanggal rilis -->
+        <TextView
+            android:id="@+id/sourceDateListNews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleList"
+            android:layout_toEndOf="@id/newsListImage"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="8dp"
+            android:text="Author • 01 Januari 2023"
+            android:textSize="12sp"
+            android:textColor="@color/dark_gray" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
